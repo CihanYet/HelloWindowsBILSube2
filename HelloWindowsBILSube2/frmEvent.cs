@@ -13,9 +13,13 @@ namespace HelloWindowsBILSube2
     public partial class frmEvent : Form
     {
         int sonuc = 0;
+        Random rnd=new Random();
         public frmEvent()
         {
             InitializeComponent();
+            btnSayi1.Text = rnd.Next(100).ToString();
+            btnSayi2.Text = rnd.Next(100).ToString();
+            btnSayi3.Text = rnd.Next(100).ToString();
         }
 
         private void frmEvent_MouseMove(object sender, MouseEventArgs e)
@@ -32,7 +36,6 @@ namespace HelloWindowsBILSube2
         private void Topla(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-
             sonuc += int.Parse(btn.Text);
            
         }
