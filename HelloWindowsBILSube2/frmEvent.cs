@@ -26,6 +26,7 @@ namespace HelloWindowsBILSube2
         {
             lblText.Text = "Gazi";
             lblKoordinat.Text = e.Location.ToString();
+           
         }
 
         private void frmEvent_MouseLeave(object sender, EventArgs e)
@@ -35,9 +36,9 @@ namespace HelloWindowsBILSube2
 
         private void Topla(object sender, EventArgs e)
         {
+            
             Button btn = (Button)sender;
-            sonuc += int.Parse(btn.Text);
-           
+            sonuc += int.Parse(btn.Text);           
         }
 
 

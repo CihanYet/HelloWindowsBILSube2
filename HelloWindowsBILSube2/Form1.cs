@@ -20,7 +20,7 @@ namespace HelloWindowsBILSube2
             btn.Size = new Size(100, 50);
             btn.Location = new Point(50, 50);
             btn.Click += Btn_Click;
-            this.Controls.Add(btn);
+            this.Controls.Add(btn); 
         }
 
         private void Btn_Click(object sender, EventArgs e)
