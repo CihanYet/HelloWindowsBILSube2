@@ -31,9 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.btnYakala = new System.Windows.Forms.Button();
             this.pnlBilgi = new System.Windows.Forms.Panel();
+            this.lblSure = new System.Windows.Forms.Label();
             this.lblSkor = new System.Windows.Forms.Label();
             this.tmrSure = new System.Windows.Forms.Timer(this.components);
-            this.lblSure = new System.Windows.Forms.Label();
+            this.lblKullanici = new System.Windows.Forms.Label();
             this.pnlBilgi.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             // pnlBilgi
             // 
             this.pnlBilgi.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnlBilgi.Controls.Add(this.lblKullanici);
             this.pnlBilgi.Controls.Add(this.lblSure);
             this.pnlBilgi.Controls.Add(this.lblSkor);
             this.pnlBilgi.Dock = System.Windows.Forms.DockStyle.Right;
@@ -56,6 +58,14 @@
             this.pnlBilgi.Name = "pnlBilgi";
             this.pnlBilgi.Size = new System.Drawing.Size(133, 426);
             this.pnlBilgi.TabIndex = 2;
+            // 
+            // lblSure
+            // 
+            this.lblSure.AutoSize = true;
+            this.lblSure.Location = new System.Drawing.Point(55, 107);
+            this.lblSure.Name = "lblSure";
+            this.lblSure.Size = new System.Drawing.Size(0, 13);
+            this.lblSure.TabIndex = 1;
             // 
             // lblSkor
             // 
@@ -71,13 +81,13 @@
             this.tmrSure.Interval = 1000;
             this.tmrSure.Tick += new System.EventHandler(this.tmrSure_Tick);
             // 
-            // lblSure
+            // lblKullanici
             // 
-            this.lblSure.AutoSize = true;
-            this.lblSure.Location = new System.Drawing.Point(55, 107);
-            this.lblSure.Name = "lblSure";
-            this.lblSure.Size = new System.Drawing.Size(0, 13);
-            this.lblSure.TabIndex = 1;
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.Location = new System.Drawing.Point(4, 298);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(0, 13);
+            this.lblKullanici.TabIndex = 2;
             // 
             // frmOyun
             // 
@@ -102,5 +112,6 @@
         private System.Windows.Forms.Label lblSkor;
         private System.Windows.Forms.Timer tmrSure;
         private System.Windows.Forms.Label lblSure;
+        private System.Windows.Forms.Label lblKullanici;
     }
 }
