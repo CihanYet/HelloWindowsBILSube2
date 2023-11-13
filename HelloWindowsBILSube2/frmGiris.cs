@@ -25,7 +25,26 @@ namespace HelloWindowsBILSube2
             }
             else
             {
-                frmOyun frm = new frmOyun(txtAd.Text, txtSoyad.Text);
+
+                string seviye;
+                if (rdKolay.Checked)
+                {
+                    seviye = "Kolay";
+                }
+                else if (rdOrta.Checked)
+                {
+                    seviye = "Orta";
+                }
+                else if (rdZor.Checked)
+                {
+                    seviye = "Zor";
+                }
+                else
+                {
+                    MessageBox.Show("Seviye seçiniz");
+                    return;
+                }
+                frmOyun frm = new frmOyun(txtAd.Text, txtSoyad.Text, seviye);
                 frm.Show();
             }
 

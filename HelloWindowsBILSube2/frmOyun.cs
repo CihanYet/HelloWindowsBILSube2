@@ -15,10 +15,25 @@ namespace HelloWindowsBILSube2
         int skor = 0;
         int sure = 10;
         Random rnd = new Random();
-        public frmOyun(string ad,string soyad)
+        public frmOyun(string ad,string soyad,string seviye)
         {
             InitializeComponent();
             lblKullanici.Text = $"{ad} {soyad}";
+            if (seviye=="Kolay")
+            {
+                this.Size = new Size(300, 300);
+                sure = 30;
+            }
+            else if (seviye=="Orta")
+            {
+                this.Size = new Size(500, 500);
+                sure = 20;
+            }
+            else if(seviye=="Zor")
+            { 
+                this.Size = new Size(800, 800);
+                sure = 10;
+            }
         }
 
         private void btnYakala_MouseMove(object sender, MouseEventArgs e)
@@ -41,7 +56,7 @@ namespace HelloWindowsBILSube2
             {
                 tmrSure.Start();
             }
-            if (skor % 10 == 0)
+            if (skor % (sure+1) == 0)
             {
                 var btn = new Button();
                 btn.Size = new Size(50, 50);
